@@ -22,10 +22,6 @@ set history=1000
 " command line.
 set tabpagemax=10
 
-" The following should not be on if smartindent or 
-" cindent are set
-" filetype indent on
-
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
@@ -56,23 +52,30 @@ set wildmenu
 " on a glob pattern
 set wildignore+=.pyc,.swp,.exe
 
+" New lines inherit the indentation of previous lines.
+set autoindent
+
 " Convert tabs to spaces.
 set expandtab
+set smarttab
+
+" Round indent to multiple of 'shiftwidth'
+set shiftround  
+
+" 1 indent == 3 spaces
+set shiftwidth=3
 
 " Insert “tabstop” number of spaces when the “tab” 
 " key is pressed
-set smarttab
 set tabstop=3
-
-" 1 tab == 3 spaces
-set shiftwidth=3
-
-" New lines inherit the indentation of previous lines.
-set autoindent
 
 " The following should not be used if filetype indent is on
 " set cindent
 " set smartindent
+
+" The following should not be on if smartindent or 
+" cindent are set
+filetype indent on
 
 " Allow vim wrapping lines
 set wrap
@@ -238,28 +241,56 @@ Plugin 'mileszs/ack.vim'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 6. gutentags settings (generate taglists for navigating)
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-
-Plugin 'ludovicchabant/vim-gutentags'
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 7. pack full of colourschemes
+" 6. pack full of colourschemes
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 Plugin 'flazz/vim-colorschemes'
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" 8. Python autocompletion
+" 7. Python autocompletion
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 " Python autocompletion
-Plugin 'deoplete-plugins/deoplete-jedi'
+Plugin 'davidhalter/jedi-vim'
+
+" Jedi selects the first line of the completion menu: for a better typing-flow and usually saves one keypress.
+
+let g:jedi#popup_select_first = 0
+
+" Jedi displays function call signatures in insert mode in real-time, 
+" highlighting the current argument in Vim's command line aligned 
+" with the function call (set to 2), which can improve the integrity 
+" of Vim's undo history.
+"
+let g:jedi#show_call_signatures = "2"
+
+" Try to find the definition of function/class under the cursor
+" (follow identifier as far as possible, includes imports and 
+" statements) - first tries |jedi#goto_definitions|, and falls back 
+" to |jedi#goto_assignments| for builtin modules
+let g:jedi#goto_command = "<leader>g"
+
+" Goto definitions 
+let g:jedi#goto_definitions_command = "<leader>d"
+
+" This function finds the first definition of the function/class 
+" under the cursor
+let g:jedi#goto_assignments_command = "<leader>a"
+
+" HELP - Show Documentation/Pydoc (shows a popup with assignments)
+let g:jedi#documentation_command = "H"
+
 " Completion from other opened files
 Plugin 'Shougo/context_filetype.vim'
 
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" 8. Use TAB for autocompletion
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+
+" Supertab is a vim plugin which allows you to use <Tab> for all 
+" your insert completion needs (:help ins-completion)
+Plugin 'ervandew/supertab'
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " 9. Automatically close parenthesis, etc.
