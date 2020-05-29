@@ -116,15 +116,20 @@ if ! shopt -oq posix; then
   fi
 fi
 
-# Export PATH 
+# Export path to MATLAB binary
 export PATH=$PATH:/usr/local/MATLAB/R2019b/bin/
+
+# Export path to GAMS binary
 export PATH=$PATH:/opt/GAMS/gams30.3_linux_x64_64_sfx/
+
+# Export path to CPLEX binary
+export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/
 
 # Set aliases
 alias vpnsoton='globalprotect connect -p globalprotect2.soton.ac.uk -u wc1f19'
 alias vpnsotoff='globalprotect disconnect'
 alias sshsoton='ssh 152.78.41.229'
-
+alias q-ssh='ssh walton@q-server.laser.ci.ufpb.br'
 
 
 
