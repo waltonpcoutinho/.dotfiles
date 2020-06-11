@@ -123,13 +123,33 @@ export PATH=$PATH:/usr/local/MATLAB/R2019b/bin/
 export PATH=$PATH:/opt/GAMS/gams30.3_linux_x64_64_sfx/
 
 # Export path to CPLEX binary
-export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/
+#export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/
+export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio127/cplex/bin/x86-64_linux/
+
+# Export path to AMPL binary
+export PATH=$PATH:/opt/AMPL
+
+# Export path to AMPL-API library
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/amplapi/lib/
+
+# Export path to ADOL-C library
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/walton/adolc_base/lib64/
+
+# Export path to WORHP library
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
+
+## Export path to WORHP parameters and license file
+WORHP_PARAM_FILE=/opt/AMPL/worhp.xml
+export WORHP_PARAM_FILE
+WORHP_LICENSE_FILE=/opt/AMPL/worhp.lic
+export WORHP_LICENSE_FILE
 
 # Set aliases
 alias vpnsoton='globalprotect connect -p globalprotect2.soton.ac.uk -u wc1f19'
 alias vpnsotoff='globalprotect disconnect'
 alias sshsoton='ssh 152.78.41.229'
 alias q-ssh='ssh walton@q-server.laser.ci.ufpb.br'
+alias glider-code='cd ~/Dropbox/Univesity_of_Southampton/Doutorado/Problems/GliderRouting/Implementation/'
 
 
 
