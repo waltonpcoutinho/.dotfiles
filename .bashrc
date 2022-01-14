@@ -123,11 +123,14 @@ git config --global user.name "waltonpcoutinho"
 # Export path to MATLAB binary
 export PATH=$PATH:/usr/local/MATLAB/R2019b/bin/
 
+# Export path to Julia binary
+export PATH=$PATH:/opt/julia-1.6.3/bin/
+
 # Export path to GAMS binary
 export PATH=$PATH:/opt/GAMS/gams30.3_linux_x64_64_sfx/
 
 # Export path to CPLEX binary
-#export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/
+export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio201/cplex/bin/x86-64_linux/
 export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio127/cplex/bin/x86-64_linux/
 
 # Export path to AMPL binary
@@ -140,7 +143,14 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/amplapi/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/walton/adolc_base/lib64/
 
 # Export path to WORHP library
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/libworhp.so
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
+
+# Export path to OCTERACT binary
+export PATH=$PATH:/opt/AMPL/octeract-engine-3.5.0/bin/
+
+# Export path to octeract libraries
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/octeract-engine-3.5.0/lib/
 
 ## Export path to WORHP parameters and license file
 WORHP_PARAM_FILE=/opt/AMPL/worhp.xml
