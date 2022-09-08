@@ -120,6 +120,9 @@ fi
 git config --global user.email "walton.coutinho@gmail.com"
 git config --global user.name "waltonpcoutinho"
 
+# Export path to .local/bin (for pip)
+export PATH=$PATH:/home/walton/.local/bin
+
 # Export path to MATLAB binary
 export PATH=$PATH:/usr/local/MATLAB/R2019b/bin/
 
