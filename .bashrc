@@ -135,6 +135,12 @@ export PATH=$PATH:/opt/GAMS/gams30.3_linux_x64_64_sfx/
 # Export path to CPLEX binary
 export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio201/cplex/bin/x86-64_linux/
 export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio127/cplex/bin/x86-64_linux/
+export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/
+
+# Export path to gurobi home folder and library
+export GUROBI_HOME=/opt/gurobi1002/linux64
+export PATH=$PATH:$GUROBI_HOME/bin/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$GUROBI_HOME/lib/
 
 # Export path to AMPL binary
 export PATH=$PATH:/opt/AMPL

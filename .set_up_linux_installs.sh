@@ -19,3 +19,4 @@ pip install pandas
 pip install sympy
 
 sudo bash -ci "$(curl -fsSL https://raw.githubusercontent.com/abelsiqueira/jill/main/jill.sh)"
+
