@@ -13,5 +13,5 @@ xrandr --addmode HDMI-A-0 1920x1080_60.00
 #This command sets the specified output (HDMI-A-0) to use the mode "1366x768_60.00", 
 #effectively changing the screen resolution to 1366x768 at 60 Hz.
 xrandr --output HDMI-A-0 --mode 1366x768_60.00
-#xrandr --output HDMI-A-0 --mode 1920x1080_60.00
+xrandr --output HDMI-A-0 --mode 1920x1080_60.00
 
