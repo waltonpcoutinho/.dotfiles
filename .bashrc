@@ -143,8 +143,8 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/amplapi/lib/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/walton/adolc_base/lib64/
 
 # Export path to WORHP library
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/libworhp.so
-#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/libworhp.so
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
 
 # Export path to OCTERACT binary
 export PATH=$PATH:/opt/AMPL/octeract-engine-3.5.0/bin/
@@ -152,11 +152,19 @@ export PATH=$PATH:/opt/AMPL/octeract-engine-3.5.0/bin/
 # Export path to octeract libraries
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/octeract-engine-3.5.0/lib/
 
-## Export path to WORHP parameters and license file
+# Export path to WORHP parameters and license file
 WORHP_PARAM_FILE=/opt/AMPL/worhp.xml
 export WORHP_PARAM_FILE
 WORHP_LICENSE_FILE=/opt/AMPL/worhp.lic
 export WORHP_LICENSE_FILE
+
+# Export path to Gurobi binaries and lib files
+export GUROBI_HOME="/opt/gurobi951/linux64"
+export PATH="${PATH}:${GUROBI_HOME}/bin"
+export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+
+# Export path to the PATH solver's license
+export PATH_LICENSE_STRING="2830898829&Courtesy&&&USR&45321&5_1_2021&1000&PATH&GEN&31_12_2025&0_0_0&6000&0_0"
 
 # Set aliases
 alias vpnsoton='globalprotect connect -p globalprotect2.soton.ac.uk -u wc1f19'
