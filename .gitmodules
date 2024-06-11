@@ -1,0 +1,3 @@
+[submodule "jill"]
+	path = jill
+	url = git@github.com:abelsiqueira/jill.git
