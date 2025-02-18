@@ -8,6 +8,7 @@ sudo apt-get install cmake
 sudo apt-get install texlive-bibtex-extra texlive-latex-recommended texlive-pictures texlive-science texlive-latex-extra chktex latexmk
 sudo apt-get install ffmpeg
 sudo apt-get install dropbox
+sudo apt-get install screen
 
 sudo apt-get install python3-pip
 sudo apt-get install python-is-python3

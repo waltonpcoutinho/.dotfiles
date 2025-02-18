@@ -183,9 +183,9 @@ alias q-ssh='ssh walton@q-server.laser.ci.ufpb.br'
 alias glider-code='cd ~/Dropbox/Univesity_of_Southampton/Doutorado/Problems/GliderRouting/Implementation/'
 
 
-xrandr --newmode "1366x768_60.00" 85.50 1366 1436 1579 1792 768 771 774 798 -hsync +vsync
-xrandr --addmode HDMI-A-0 "1366x768_60.00"
-xrandr --output HDMI-A-0 --mode "1366x768_60.00"
+#xrandr --newmode "1366x768_60.00" 85.50 1366 1436 1579 1792 768 771 774 798 -hsync +vsync
+#xrandr --addmode HDMI-A-0 "1366x768_60.00"
+#xrandr --output HDMI-A-0 --mode "1366x768_60.00"
 
 #xrandr --newmode "1920x1080_60.00" 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync
 #xrandr --addmode HDMI-A-0 1920x1080_60.00
