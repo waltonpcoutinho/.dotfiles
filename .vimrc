@@ -324,8 +324,8 @@ filetype on
 filetype plugin indent on    " required
 filetype plugin on
 
-" Set up colour scheme
-colorscheme badwolf
+"" Set up colour scheme
+"colorscheme badwolf
 
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
