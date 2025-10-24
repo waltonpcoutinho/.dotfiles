@@ -141,9 +141,11 @@ export PATH=$PATH:/opt/ibm/ILOG/CPLEX_Studio129/cplex/bin/x86-64_linux/
 export GUROBI_HOME=/opt/gurobi1002/linux64
 export PATH=$PATH:$GUROBI_HOME/bin/
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$GUROBI_HOME/lib/
+export GRB_LICENSE_FILE=/home/centor.ulaval.ca/coutiwal/gurobi.lic
 
 # Export path to AMPL binary
 export PATH=$PATH:/opt/AMPL
+export PATH=$PATH:~/AMPL/ampl.linux-intel64/
 
 # Export path to AMPL-API library
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/amplapi/lib/
@@ -151,9 +153,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/amplapi/lib/
 # Export path to ADOL-C library
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/walton/adolc_base/lib64/
 
-# Export path to WORHP library
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/libworhp.so
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
+## Export path to WORHP library
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/libworhp.so
+#export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
+export WORHP_LICENSE_FILE=/home/centor.ulaval.ca/coutiwal/AMPL/ampl.linux-intel64/worhp.lic
 
 # Export path to OCTERACT binary
 export PATH=$PATH:/opt/AMPL/octeract-engine-3.5.0/bin/
@@ -161,16 +164,8 @@ export PATH=$PATH:/opt/AMPL/octeract-engine-3.5.0/bin/
 # Export path to octeract libraries
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/octeract-engine-3.5.0/lib/
 
-# Export path to WORHP parameters and license file
-WORHP_PARAM_FILE=/opt/AMPL/worhp.xml
-export WORHP_PARAM_FILE
-WORHP_LICENSE_FILE=/opt/AMPL/worhp.lic
-export WORHP_LICENSE_FILE
-
-# Export path to Gurobi binaries and lib files
-export GUROBI_HOME="/opt/gurobi951/linux64"
-export PATH="${PATH}:${GUROBI_HOME}/bin"
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
+# Export Hexaly lib path
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/hexaly_13_5/bin/
 
 # Export path to the PATH solver's license
 export PATH_LICENSE_STRING="2830898829&Courtesy&&&USR&45321&5_1_2021&1000&PATH&GEN&31_12_2025&0_0_0&6000&0_0"
@@ -181,7 +176,8 @@ alias vpnsotoff='globalprotect disconnect'
 alias sshsoton='ssh 152.78.41.229'
 alias q-ssh='ssh walton@q-server.laser.ci.ufpb.br'
 alias glider-code='cd ~/Dropbox/Univesity_of_Southampton/Doutorado/Problems/GliderRouting/Implementation/'
-
+alias python='python3'
+alias narvalconnect='ssh walton@narval.alliancecan.ca'
 
 #xrandr --newmode "1366x768_60.00" 85.50 1366 1436 1579 1792 768 771 774 798 -hsync +vsync
 #xrandr --addmode HDMI-A-0 "1366x768_60.00"
