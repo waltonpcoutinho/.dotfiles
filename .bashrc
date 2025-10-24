@@ -153,7 +153,10 @@ export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/walton/adolc_base/lib64/
 
 # Export path to WORHP library
 export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/AMPL/libworhp.so
-export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/WORHP/worhp_1.13-2_linux/lib/
+
+# Export path to Hexaly library
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/opt/hexaly_13_5/bin
+#export PATH=$PATH:/opt/hexaly_13_5/
 
 # Export path to OCTERACT binary
 export PATH=$PATH:/opt/AMPL/octeract-engine-3.5.0/bin/
@@ -167,11 +170,6 @@ export WORHP_PARAM_FILE
 WORHP_LICENSE_FILE=/opt/AMPL/worhp.lic
 export WORHP_LICENSE_FILE
 
-# Export path to Gurobi binaries and lib files
-export GUROBI_HOME="/opt/gurobi951/linux64"
-export PATH="${PATH}:${GUROBI_HOME}/bin"
-export LD_LIBRARY_PATH="${LD_LIBRARY_PATH}:${GUROBI_HOME}/lib"
-
 # Export path to the PATH solver's license
 export PATH_LICENSE_STRING="2830898829&Courtesy&&&USR&45321&5_1_2021&1000&PATH&GEN&31_12_2025&0_0_0&6000&0_0"
 
@@ -183,9 +181,9 @@ alias q-ssh='ssh walton@q-server.laser.ci.ufpb.br'
 alias glider-code='cd ~/Dropbox/Univesity_of_Southampton/Doutorado/Problems/GliderRouting/Implementation/'
 
 
-#xrandr --newmode "1366x768_60.00" 85.50 1366 1436 1579 1792 768 771 774 798 -hsync +vsync
-#xrandr --addmode HDMI-A-0 "1366x768_60.00"
-#xrandr --output HDMI-A-0 --mode "1366x768_60.00"
+xrandr --newmode "1366x768_60.00" 85.50 1366 1436 1579 1792 768 771 774 798 -hsync +vsync
+xrandr --addmode HDMI-A-0 "1366x768_60.00"
+xrandr --output HDMI-A-0 --mode "1366x768_60.00"
 
 #xrandr --newmode "1920x1080_60.00" 173.00 1920 2048 2248 2576 1080 1083 1088 1120 -hsync +vsync
 #xrandr --addmode HDMI-A-0 1920x1080_60.00
